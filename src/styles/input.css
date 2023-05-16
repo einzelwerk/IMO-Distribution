@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Manrope';
+    src: url('../fonts/Manrope-Medium.woff2') format('woff2'), url('../fonts/Manrope-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Manrope';
+    src: url('../fonts/Manrope-Regular.woff2') format('woff2'), url('../fonts/Manrope-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  html {
+    font-family: 'Manrope', system-ui, sans-serif;
+    @apply text-black;
+  }
+
+  .text-xs {
+    font-size: .75rem;
+    line-height: 1.625rem;
+    @screen md {
+      font-size: 1rem;
+    }
+  }
+
+  .text-sm {
+    font-size: 1.125rem;
+    line-height: 130%;
+  }
+
+  .text-base {
+    font-size: 1.5rem;
+    line-height: 120%;
+  }
+
+  .text-md {
+    font-size: 2rem;
+    line-height: 120%;
+  }
+
+  .text-lg {
+    line-height: 100%;
+    font-size: 2rem;
+    @screen md {
+      font-size: 3.5rem;
+    }
+  }
+
+  .text-xl {
+    font-size: 3.125rem;
+    line-height: 100%;
+    @screen md {
+      font-size: 6.25rem;
+    }
+  }
+
+  .btn {
+    @apply text-xs bg-white px-10 py-2 tracking-tight transition-colors;
+    &--red {
+      @apply bg-red text-white;
+      &:hover {
+        @apply bg-red-hover;
+      }
+    }
+  }
+
+  .section {
+    @apply py-16;
+    @screen md {
+      @apply py-32;
+    }
+  }
+
+  .section-heading {
+    @apply mb-14 flex flex-col justify-between max-md:gap-5 lg:flex-row;
+    &__title {
+      @apply text-lg max-w-xl;
+    }
+
+    &__text {
+      @apply flex max-w-xl flex-col;
+    }
+
+    &__desc {
+      @apply text-sm opacity-50;
+    }
+  }
+}
+
+.main {
+  overflow: hidden;
+}
+
+.swiper-scrollbar {
+  height: 2px !important;
+}
+
+.swiper-scrollbar-drag {
+  background: #000;
+  border-radius: 0;
+}

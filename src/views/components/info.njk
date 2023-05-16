@@ -1,0 +1,48 @@
+<section class="section container">
+  <div class="section-heading">
+    <h2 class="section-heading__title">Informationen zum Unternehmen</h2>
+    <div class="section-heading__text">
+      <p class="section-heading__desc mb-5">The IMO Group is an association of several companies from different industries. Together we are strong, so we rely on mutual give and take within our partnerships. Everyone benefits from everyone.</p>
+    </div>
+  </div>
+  <div class="flex flex-col lg:flex-row gap-14 md:gap-8">
+    <div class="js-info-slider relative w-full min-w-0 bg-red text-white">
+      <div class="swiper-wrapper">
+        {% for item in [1,2,3] %}
+        <div class="swiper-slide h-full">
+          <div class="flex h-full flex-col-reverse md:flex-row">
+            <div class="flex flex-col gap-8 p-8">
+              <span class="text-base">0{{ item }}</span>
+              <h3 class="text-md">Ein optimales Produktangebot</h3>
+              <p class="text-sm opacity-50">Unsere Werte und Verpflichtungen sind die Grundbausteine unserer Partnerschaften. Wir halten unsere Versprechen und verteidigen unsere Unternehmenswerte. Wettbewerbsumfeld und Alleinstellungsmerkmale:</p>
+            </div>
+            <picture class="block w-full flex-none max-md:h-[400px] md:w-[350px]">
+              <img src="{% static './images/slider.jpg' %}" class="h-full w-full object-cover" alt="" />
+            </picture>
+          </div>
+        </div>
+        {%- endfor %}
+      </div>
+      <div class="bottom-8 left-7 z-10 flex max-md:pb-8 max-md:pl-7 md:absolute">
+        <button class="js-i-prev-el h-[32px] w-[28px] [&.swiper-button-disabled]:text-[#D3848E]">
+          <svg class="block h-full w-full">
+            <use xlink:href="./assets/sprite.svg#slider-left_sprite"></use>
+          </svg>
+        </button>
+        <button class="js-i-next-el h-[32px] w-[28px] [&.swiper-button-disabled]:text-[#D3848E]">
+          <svg class="block h-full w-full">
+            <use xlink:href="./assets/sprite.svg#slider-right_sprite"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="flex flex-none flex-col gap-8">
+      {% for item in [1,2,3] %}
+      <div class="flex flex-col gap-5 border-b md:border-b-0 md:border-l border-gray-100 p-8">
+        <h4 class="text-md">> 500 employers</h4>
+        <p class="text-white-50">Unser Personal besteht aus mehr als</p>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

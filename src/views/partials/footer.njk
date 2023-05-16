@@ -1,0 +1,64 @@
+<footer class="bg-red py-14 text-white">
+  <div class="container flex flex-col">
+    <div class="flex justify-between">
+      <nav>
+        <ul class="flex gap-12">
+          <li class="text-base">
+            <a href=""> Startseite </a>
+          </li>
+          <li class="text-base">
+            <a href=""> Unsere Unternehmen </a>
+          </li>
+          <li class="text-base">
+            <a href=""> Karriere </a>
+          </li>
+          <li class="text-base">
+            <a href=""> Karriere </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="relative flex flex-col text-white" x-data="{ dropdown : false}" x-on:click.outside="dropdown = false">
+        <button class="flex items-center gap-1 border border-gray-50 px-4 py-2" x-on:click="dropdown = ! dropdown">
+          <span>En</span>
+          <svg width="6" height="10">
+            <use xlink:href="./assets/sprite.svg#arrow-d_sprite"></use>
+          </svg>
+        </button>
+        <div x-show="dropdown" class="absolute top-full w-full border border-gray-50 text-black">
+          <ul class="flex flex-col">
+            <li class="bg-white hover:bg-red hover:text-white">
+              <a href="" class="block px-3 py-2">En</a>
+            </li>
+            <li class="bg-white hover:bg-red hover:text-white">
+              <a href="" class="block px-3 py-2">De</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="mt-14 flex justify-between">
+      <ul class="flex gap-7">
+        <li class="opacity-40">All rights reserved 2022 IMO Group</li>
+        <li class="opacity-40 transition-opacity hover:opacity-100">
+          <a href=""> Imprint </a>
+        </li>
+        <li class="opacity-40 transition-opacity hover:opacity-100">
+          <a href=""> Privacy Policy </a>
+        </li>
+        <li class="md:ml-36">
+          <address class="not-italic">
+            Möckernstraße 31, 30163 Hannover
+          </address>
+        </li>
+      </ul>
+      <div class="flex gap-5">
+        <a href="" class="block w-5 h-5" target="_blank" rel="noopener nofollow">
+          <img src="{% static './images/inst.svg' %}" alt="">
+        </a>
+        <a href="" class="block w-5 h-5" target="_blank" rel="noopener nofollow">
+          <img src="{% static './images/fb.svg' %}" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>

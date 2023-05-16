@@ -1,0 +1,19 @@
+<section class="relative min-h-screen">
+  <picture class="w-full-h-full absolute inset-0 block">
+    <img src="{% static './images/cta.jpg' %}" class="h-full w-full object-cover" alt="" />
+  </picture>
+  <div class="container absolute inset-x-0 bottom-16 flex flex-col items-start">
+    <div class="flex max-w-2xl flex-col-reverse bg-white  md:flex-row">
+      <div class="flex flex-col p-8">
+        <h4 class="text-md mb-8">Als starker Partner sind wir an Ihrer Seite.</h4>
+        <form action="" class="flex flex-col gap-8">
+          <input type="text" placeholder="Email*" class="border-b text-xs pt-0 pb-3 px-0 border-t-0 border-l-0 border-r-0" />
+          <button class="btn btn--red py-4 text-sm">Kontaktieren</button>
+        </form>
+      </div>
+      <picture class="block w-56 flex-none">
+        <img src="{% static './images/cta-form.jpg' %}" class="w-full h-full" alt="">
+      </picture>
+    </div>
+  </div>
+</section>

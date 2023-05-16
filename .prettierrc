@@ -1,0 +1,10 @@
+{
+  "singleQuote": true,
+  "jsxSingleQuote": true,
+  "arrowParens": "always",
+  "max-len": ["error", 250, 2],
+  "printWidth": 250,
+  "tabWidth": 2,
+  "useTabs": false,
+  "tailwindConfig": "./tailwind.config.js"
+}
