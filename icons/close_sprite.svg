@@ -1,0 +1,8 @@
+export default {
+      id: "close_sprite-usage",
+      viewBox: "0 0 19 20",
+      url: "/assets/" + "C:\\projects\\imo\\src\\assets\\icons\\close_sprite.svg",
+      toString: function () {
+        return this.url;
+      }
+    }

@@ -1,0 +1,8 @@
+export default {
+      id: "slider-right_sprite-usage",
+      viewBox: "0 0 28 32",
+      url: "/assets/" + "C:\\projects\\imo\\src\\assets\\icons\\slider-right_sprite.svg",
+      toString: function () {
+        return this.url;
+      }
+    }
