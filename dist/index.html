@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+  <script defer src="assets/js/main.js"></script><link href="main.css" rel="stylesheet"></head>
+  <body x-data="{ menuOpen : false }">
+    <div class="root">
+      
+        
+
+<header class="absolute inset-x-0 z-10 max-lg:py-5">
+  <div class="container flex items-center justify-between">
+    <a href="" class="block">
+      <picture class="block h-11 w-28 md:h-11 md:w-36"> <img src="images/logo.svg" class="block h-full w-full" alt="" /> </picture>
+    </a>
+    <nav class="text-white max-lg:hidden">
+      <ul class="flex gap-10 border-b border-gray-50">
+        
+        <li class="active flex py-8 [&.active]:border-b [&.active]:border-white">
+          <a href="" class="block"> Startseite </a>
+        </li>
+        
+        <li class=" flex py-8 [&.active]:border-b [&.active]:border-white">
+          <a href="" class="block"> Unsere Unternehmen </a>
+        </li>
+        
+        <li class=" flex py-8 [&.active]:border-b [&.active]:border-white">
+          <a href="" class="block"> Karriere </a>
+        </li>
+        
+        <li class=" flex py-8 [&.active]:border-b [&.active]:border-white">
+          <a href="" class="block"> Kontakt </a>
+        </li>
+        
+      </ul>
+    </nav>
+    <div class="flex gap-2">
+      <div class="relative flex flex-col text-white" x-data="{ dropdown : false}" x-on:click.outside="dropdown = false">
+        <button class="flex items-center gap-1 border border-gray-50 px-4 py-2" x-on:click="dropdown = ! dropdown">
+          <span>En</span>
+          <svg width="6" height="10">
+            <use xlink:href="./assets/sprite.svg#arrow-d_sprite"></use>
+          </svg>
+        </button>
+        <div x-show="dropdown" class="absolute top-full w-full border border-gray-50 text-black">
+          <ul class="flex flex-col">
+            <li class="bg-white hover:bg-red hover:text-white">
+              <a href="" class="block px-3 py-2">En</a>
+            </li>
+            <li class="bg-white hover:bg-red hover:text-white">
+              <a href="" class="block px-3 py-2">De</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <a href="" class="btn btn--red"> Kontaktieren </a>
+      <button class="lg:hidden" x-on:click="menuOpen = true">
+        <svg width="40" height="10">
+          <use xlink:href="./assets/sprite.svg#menu_sprite"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="fixed left-0 top-0 z-50 h-full w-full bg-black" x-show="menuOpen" x-transition>
+  <div class="container flex items-center justify-between border-b border-[#383945] py-5">
+    <a href="" class="block">
+      <picture class="block h-11 w-28 md:h-11 md:w-36"> <img src="images/logo.svg" class="block h-full w-full" alt="" /> </picture>
+    </a>
+    <button x-on:click="menuOpen = false">
+      <svg width="18" height="18">
+        <use xlink:href="./assets/sprite.svg#close_sprite"></use>
+      </svg>
+    </button>
+  </div>
+  <div class="mt-16 flex flex-col">
+    <nav>
+      <ul class="flex flex-col">
+        <li class="active to-transparent container from-red py-6 text-white-50 [&.active]:bg-gradient-to-r [&.active]:text-white">
+          <a href="">Startseite</a>
+        </li>
+        <li class="container py-6 text-white-50">
+          <a href="">Unsere Unternehmen</a>
+        </li>
+        <li class="container py-6 text-white-50">
+          <a href="">Karriere</a>
+        </li>
+        <li class="container py-6 text-white-50">
+          <a href="">Kontact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container mt-11">
+    <button class="btn btn--red text-sm w-full py-4 font-medium">Kontaktieren</button>
+  </div>
+  <div class="container mt-14 flex justify-between items-center">
+    <div class="flex gap-5">
+      <a href="" class="block h-8 w-8">
+        <img src="images/inst.svg" class="h-full w-full" alt="" />
+      </a>
+      <a href="" class="block h-8 w-8">
+        <img src="images/fb.svg" class="h-full w-full" alt="" />
+      </a>
+    </div>
+    <div class="relative flex flex-col text-white" x-data="{ dropdown : false}" x-on:click.outside="dropdown = false">
+      <button class="flex items-center gap-1 border border-gray-50 px-4 py-2" x-on:click="dropdown = ! dropdown">
+        <span>En</span>
+        <svg width="6" height="10">
+          <use xlink:href="./assets/sprite.svg#arrow-d_sprite"></use>
+        </svg>
+      </button>
+      <div x-show="dropdown" class="absolute top-full w-full border border-gray-50 text-black">
+        <ul class="flex flex-col">
+          <li class="bg-white hover:bg-red hover:text-white">
+            <a href="" class="block px-3 py-2">En</a>
+          </li>
+          <li class="bg-white hover:bg-red hover:text-white">
+            <a href="" class="block px-3 py-2">De</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container flex justify-between mt-8">
+    <p class="text-white-50 text-xs">
+      All rights reserved 2022 IMO Group
+    </p>
+    <ul class="flex gap-3">
+      <li class="text-white-50 text-xs">
+        <a href="">Imprint</a>
+      </li>
+      <li class="text-white-50 text-xs">
+        <a href="">Privacy Policy</a>
+      </li>
+    </ul>
+
+  </div>
+</div>
+
+      
+      <main class="main">
+        
+  <section class="relative h-[1200px] text-white">
+  <picture class="absolute inset-0 block h-full w-full">
+    <img src="images/hero.jpg" alt="" class="h-full w-full object-cover" />
+  </picture>
+  <h1 class="text-xl container absolute inset-x-0 top-36 flex flex-col items-start font-medium">
+    <span>Gemeinsam.</span>
+    <span class="ml-10">Erfolgreich.</span>
+    <span class="relative">
+      <span> Wachsen </span>
+      <a href="#" class="text-base absolute right-0 top-1/2 flex h-24 w-24 -translate-y-1/2 translate-x-1/2 items-center justify-center rounded-full bg-red md:h-36 md:w-36"
+        >Get in <br />
+        touch</a
+      >
+    </span>
+  </h1>
+  <div class="container absolute inset-x-0 bottom-16 flex flex-col md:flex-row justify-between md:border-t md:border-gray-50 pt-8">
+    <p class="text-sm">Die IMO Distribution GmbH ist ein dynamischer internationaler Distributor und Großhändler mit Sitz in Hannover. Unser Fokus liegt auf A-Marken der Bereiche Gesundheit, Umwelt & Lifestyle.</p>
+    <p class="text-sm">Unser Ziel ist es, eine führende Position auf dem nationalen und internationalen Markt zu erreichen, neue geografische Gebiete mit den besten Lösungen für jeden Kunden zu erschließen</p>
+  </div>
+</section>
+
+  <section class="section bg-red text-white">
+  <div class="container">
+    <div class="section-heading">
+      <h2 class="section-heading__title">Imo Distribution Marken portfolio</h2>
+      <div class="section-heading__text">
+        <p class="section-heading__desc mb-5">Unser Ziel ist es, die Bedürfnisse unseres globalen Netzwerks von Kunden und Lieferanten mit einer sehr gesunden, innovativen und transparenten Organisation optimal zu erfüllen.</p>
+        <div class="flex">
+          <button class="p-prev-el h-[32px] w-[28px] [&.swiper-button-disabled]:text-[#D3848E]">
+            <svg class="block h-full w-full">
+              <use xlink:href="./assets/sprite.svg#slider-left_sprite"></use>
+            </svg>
+          </button>
+          <button class="p-next-el h-[32px] w-[28px] [&.swiper-button-disabled]:text-[#D3848E]">
+            <svg class="block h-full w-full">
+              <use xlink:href="./assets/sprite.svg#slider-right_sprite"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="js-partners-slider overflow-visible">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="flex h-[260px] items-center justify-center">
+            <img class="h-full w-full object-cover" src="images/partners/1.svg" alt="" />
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="flex h-[260px] items-center justify-center">
+            <img class="h-full w-full object-cover" src="images/partners/2.svg" alt="" />
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="flex h-[260px] items-center justify-center">
+            <img class="h-full w-full object-cover" src="images/partners/3.svg" alt="" />
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="flex h-[260px] items-center justify-center">
+            <img class="h-full w-full object-cover" src="images/partners/4.svg" alt="" />
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="flex h-[260px] items-center justify-center">
+            <img class="h-full w-full object-cover" src="images/partners/1.svg" alt="" />
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="flex h-[260px] items-center justify-center">
+            <img class="h-full w-full object-cover" src="images/partners/2.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="section container">
+  <div class="section-heading">
+    <h2 class="section-heading__title">Informationen zum Unternehmen</h2>
+    <div class="section-heading__text">
+      <p class="section-heading__desc mb-5">The IMO Group is an association of several companies from different industries. Together we are strong, so we rely on mutual give and take within our partnerships. Everyone benefits from everyone.</p>
+    </div>
+  </div>
+  <div class="flex flex-col lg:flex-row gap-14 md:gap-8">
+    <div class="js-info-slider relative w-full min-w-0 bg-red text-white">
+      <div class="swiper-wrapper">
+        
+        <div class="swiper-slide h-full">
+          <div class="flex h-full flex-col-reverse md:flex-row">
+            <div class="flex flex-col gap-8 p-8">
+              <span class="text-base">01</span>
+              <h3 class="text-md">Ein optimales Produktangebot</h3>
+              <p class="text-sm opacity-50">Unsere Werte und Verpflichtungen sind die Grundbausteine unserer Partnerschaften. Wir halten unsere Versprechen und verteidigen unsere Unternehmenswerte. Wettbewerbsumfeld und Alleinstellungsmerkmale:</p>
+            </div>
+            <picture class="block w-full flex-none max-md:h-[400px] md:w-[350px]">
+              <img src="images/slider.jpg" class="h-full w-full object-cover" alt="" />
+            </picture>
+          </div>
+        </div>
+        <div class="swiper-slide h-full">
+          <div class="flex h-full flex-col-reverse md:flex-row">
+            <div class="flex flex-col gap-8 p-8">
+              <span class="text-base">02</span>
+              <h3 class="text-md">Ein optimales Produktangebot</h3>
+              <p class="text-sm opacity-50">Unsere Werte und Verpflichtungen sind die Grundbausteine unserer Partnerschaften. Wir halten unsere Versprechen und verteidigen unsere Unternehmenswerte. Wettbewerbsumfeld und Alleinstellungsmerkmale:</p>
+            </div>
+            <picture class="block w-full flex-none max-md:h-[400px] md:w-[350px]">
+              <img src="images/slider.jpg" class="h-full w-full object-cover" alt="" />
+            </picture>
+          </div>
+        </div>
+        <div class="swiper-slide h-full">
+          <div class="flex h-full flex-col-reverse md:flex-row">
+            <div class="flex flex-col gap-8 p-8">
+              <span class="text-base">03</span>
+              <h3 class="text-md">Ein optimales Produktangebot</h3>
+              <p class="text-sm opacity-50">Unsere Werte und Verpflichtungen sind die Grundbausteine unserer Partnerschaften. Wir halten unsere Versprechen und verteidigen unsere Unternehmenswerte. Wettbewerbsumfeld und Alleinstellungsmerkmale:</p>
+            </div>
+            <picture class="block w-full flex-none max-md:h-[400px] md:w-[350px]">
+              <img src="images/slider.jpg" class="h-full w-full object-cover" alt="" />
+            </picture>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-8 left-7 z-10 flex max-md:pb-8 max-md:pl-7 md:absolute">
+        <button class="js-i-prev-el h-[32px] w-[28px] [&.swiper-button-disabled]:text-[#D3848E]">
+          <svg class="block h-full w-full">
+            <use xlink:href="./assets/sprite.svg#slider-left_sprite"></use>
+          </svg>
+        </button>
+        <button class="js-i-next-el h-[32px] w-[28px] [&.swiper-button-disabled]:text-[#D3848E]">
+          <svg class="block h-full w-full">
+            <use xlink:href="./assets/sprite.svg#slider-right_sprite"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="flex flex-none flex-col gap-8">
+      
+      <div class="flex flex-col gap-5 border-b md:border-b-0 md:border-l border-gray-100 p-8">
+        <h4 class="text-md">> 500 employers</h4>
+        <p class="text-white-50">Unser Personal besteht aus mehr als</p>
+      </div>
+      <div class="flex flex-col gap-5 border-b md:border-b-0 md:border-l border-gray-100 p-8">
+        <h4 class="text-md">> 500 employers</h4>
+        <p class="text-white-50">Unser Personal besteht aus mehr als</p>
+      </div>
+      <div class="flex flex-col gap-5 border-b md:border-b-0 md:border-l border-gray-100 p-8">
+        <h4 class="text-md">> 500 employers</h4>
+        <p class="text-white-50">Unser Personal besteht aus mehr als</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="relative min-h-screen">
+  <picture class="w-full-h-full absolute inset-0 block">
+    <img src="images/cta.jpg" class="h-full w-full object-cover" alt="" />
+  </picture>
+  <div class="container absolute inset-x-0 bottom-16 flex flex-col items-start">
+    <div class="flex max-w-2xl flex-col-reverse bg-white  md:flex-row">
+      <div class="flex flex-col p-8">
+        <h4 class="text-md mb-8">Als starker Partner sind wir an Ihrer Seite.</h4>
+        <form action="" class="flex flex-col gap-8">
+          <input type="text" placeholder="Email*" class="border-b text-xs pt-0 pb-3 px-0 border-t-0 border-l-0 border-r-0" />
+          <button class="btn btn--red py-4 text-sm">Kontaktieren</button>
+        </form>
+      </div>
+      <picture class="block w-56 flex-none">
+        <img src="images/cta-form.jpg" class="w-full h-full" alt="">
+      </picture>
+    </div>
+  </div>
+</section>
+
+  <section class="section container">
+  <div class="section-heading">
+    <h2 class="section-heading__title">Imo Distribution Unser team</h2>
+    <div class="section-heading__text">
+      <p class="section-heading__desc mb-5">Unsere engagierten Mitarbeiter sind unser wertvollstes Kapital und leben unsere Philosophie, wodurch sie ihren eigenen Beitrag zur IMO Distribution leisten können.</p>
+      <a href="" class="flex w-full max-w-xs justify-between border-b border-black pb-3 font-medium">
+        Contact us
+        <svg width="24" height="24">
+          <use xlink:href="./assets/sprite.svg#slider-right_sprite"></use>
+        </svg>
+      </a>
+    </div>
+  </div>
+  <div class="swiper js-team-slider">
+    <div class="swiper-wrapper max-md:pb-8 md:grid md:grid-cols-4 md:gap-8">
+      <div class="swiper-slide col-span-2">
+        <div class="flex flex-col">
+          <picture class="mb-5 block h-full w-full">
+            <img src="images/team.jpg" class="h-full w-full object-cover" alt="" />
+          </picture>
+          <div class="flex flex-col md:flex-row md:justify-between">
+            <div class="flex flex-col gap-2">
+              <h3 class="text-sm font-medium">Alexander Vulikh</h3>
+              <a href="" class="text-sm text-white-50">alex.vulikh@imodistri.com</a>
+              <a href="" class="text-sm text-white-50">+49 178 279 46 04</a>
+            </div>
+            <p class="text-sm font-medium text-red">CEO / Sales Director</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="flex flex-col">
+          <picture class="mb-5 block h-full w-full ">
+            <img src="images/team.jpg" class="h-full w-full object-cover" alt="" />
+          </picture>
+          <div class="flex flex-col  md:justify-between md:gap-10">
+            <div class="flex flex-col gap-2 text-sm">
+              <p class="text-blue font-medium">Sales Assistant </p>
+              <h3 class="font-medium">Faik Kaletovic</h3>
+            </div>
+            <div class="flex flex-col text-white-50 text-sm gap-3">
+              <a href="">
+                faik.kaletovic@imodistri.com
+              </a>
+              <a href="">
+                +49 511 9999 4 247
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="flex flex-col">
+          <picture class="mb-5 block h-full w-full ">
+            <img src="images/team.jpg" class="h-full w-full object-cover" alt="" />
+          </picture>
+          <div class="flex flex-col  md:justify-between md:gap-10">
+            <div class="flex flex-col gap-2 text-sm">
+              <p class="text-blue font-medium">Sales Assistant </p>
+              <h3 class="font-medium">Faik Kaletovic</h3>
+            </div>
+            <div class="flex flex-col text-white-50 text-sm gap-3">
+              <a href="">
+                faik.kaletovic@imodistri.com
+              </a>
+              <a href="">
+                +49 511 9999 4 247
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+    <div class="swiper-scrollbar md:hidden"></div>
+  </div>
+</section>
+<picture class="aspect-h-9 aspect-w-16 block w-full">
+  <img src="images/image.jpg" class="h-full w-full object-cover" alt="" />
+</picture>
+
+  <section class="section bg-black text-white">
+  <div class="container">
+    <div class="section-heading">
+      <h2 class="section-heading__title">Teil der IMO Group</h2>
+      <div class="section-heading__text">
+        <p class="section-heading__desc mb-5">Wir setzen auf ein gegenseitiges Geben und Nehmen innerhalb unserer Partnerschaften.</p>
+        <p class="section-heading__desc mb-5">
+          Durch die Kompetenz und Authentizität in unserem Handeln schaffen wir langfristig und nachhaltig Vertrauen bei unseren Partnern. Wir leben Offenheit und Ehrlichkeit einander gegenüber. Wir warten nicht auf Wunder, sondern sind immer und
+          überall proaktiv mitten drin statt nur dabei.
+        </p>
+      </div>
+    </div>
+    <picture class="block aspect-w-12 aspect-h-4">
+      <img src="images/imo-block.png" alt="">
+    </picture>
+  </div>
+</section>
+
+  <section class="">
+  <div class="aspect-h-9 aspect-w-16 relative">
+    <div class="container absolute top-14 z-10 flex max-lg:flex-col items-start gap-32 text-white">
+      <h2 class="text-xl relative">
+        <span>IMO </span>
+        <span >Distribution</span>
+        <span class="relative">
+          <span> Werte </span>
+          <a href="#" class="text-base absolute right-0 top-1/2 flex h-24 w-24 -translate-y-1/2 translate-x-full items-center justify-center rounded-full bg-red md:h-36 md:w-36"
+            >Get in <br />
+            touch</a
+          >
+        </span>
+      </h2>
+      <div class="flex flex-col md:flex-row md:gap-5 text-sm">
+        <p class="flex-1">Unsere Werte und Verpflichtungen sind die Grundbausteine unserer Partnerschaften.</p>
+        <p class="flex-1">Wir tun mehr als nur mit Produkten handeln; wir investieren auch in Beziehungen. In der heutigen Welt der weitreichenden Automatisierung glauben wir, dass Authentizität und persönlicher Kontakt wichtiger denn je sind.</p>
+      </div>
+    </div>
+    <picture class="absolute inset-0 block">
+      <img src="images/planet.jpg" class="block h-full w-full object-cover" alt="" />
+    </picture>
+  </div>
+</section>
+<section class="">
+  <div class="aspect-h-11 aspect-w-16 relative">
+    <div class="container absolute top-14 z-10 max-lg:flex-col flex items-start gap-32 text-white">
+      <h2 class="text-xl relative flex-1">
+        <span>Unsere </span>
+   
+        <span class="relative">
+          <span> stärke</span>
+          <a href="#" class="text-base absolute right-0 top-1/2 flex h-24 w-24 -translate-y-1/2 translate-x-full items-center justify-center rounded-full bg-red md:h-36 md:w-36"
+            >Get in <br />
+            touch</a
+          >
+        </span>
+      </h2>
+      <div class="flex flex-col flex-1">
+        <p class="flex-1 py-8 border-b border-white">Unsere Werte und Verpflichtungen sind die Grundbausteine unserer Partnerschaften.</p>
+        <p class="flex-1 py-8">Wir tun mehr als nur mit Produkten handeln; wir investieren auch in Beziehungen. In der heutigen Welt der weitreichenden Automatisierung glauben wir, dass Authentizität und persönlicher Kontakt wichtiger denn je sind.</p>
+      </div>
+    </div>
+    <picture class="absolute inset-0 block">
+      <img src="images/image2.jpg" class="block h-full w-full object-cover" alt="" />
+    </picture>
+  </div>
+</section>
+
+
+      </main>
+      
+        <footer class="bg-red py-14 text-white">
+  <div class="container flex flex-col">
+    <div class="flex justify-between">
+      <nav>
+        <ul class="flex gap-12">
+          <li class="text-base">
+            <a href=""> Startseite </a>
+          </li>
+          <li class="text-base">
+            <a href=""> Unsere Unternehmen </a>
+          </li>
+          <li class="text-base">
+            <a href=""> Karriere </a>
+          </li>
+          <li class="text-base">
+            <a href=""> Karriere </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="relative flex flex-col text-white" x-data="{ dropdown : false}" x-on:click.outside="dropdown = false">
+        <button class="flex items-center gap-1 border border-gray-50 px-4 py-2" x-on:click="dropdown = ! dropdown">
+          <span>En</span>
+          <svg width="6" height="10">
+            <use xlink:href="./assets/sprite.svg#arrow-d_sprite"></use>
+          </svg>
+        </button>
+        <div x-show="dropdown" class="absolute top-full w-full border border-gray-50 text-black">
+          <ul class="flex flex-col">
+            <li class="bg-white hover:bg-red hover:text-white">
+              <a href="" class="block px-3 py-2">En</a>
+            </li>
+            <li class="bg-white hover:bg-red hover:text-white">
+              <a href="" class="block px-3 py-2">De</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="mt-14 flex justify-between">
+      <ul class="flex gap-7">
+        <li class="opacity-40">All rights reserved 2022 IMO Group</li>
+        <li class="opacity-40 transition-opacity hover:opacity-100">
+          <a href=""> Imprint </a>
+        </li>
+        <li class="opacity-40 transition-opacity hover:opacity-100">
+          <a href=""> Privacy Policy </a>
+        </li>
+        <li class="md:ml-36">
+          <address class="not-italic">
+            Möckernstraße 31, 30163 Hannover
+          </address>
+        </li>
+      </ul>
+      <div class="flex gap-5">
+        <a href="" class="block w-5 h-5" target="_blank" rel="noopener nofollow">
+          <img src="images/inst.svg" alt="">
+        </a>
+        <a href="" class="block w-5 h-5" target="_blank" rel="noopener nofollow">
+          <img src="images/fb.svg" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+      
+    </div>
+  </body>
+</html>

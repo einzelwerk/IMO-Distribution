@@ -1,0 +1,8 @@
+export default {
+      id: "arrow-d_sprite-usage",
+      viewBox: "0 0 10 6",
+      url: "/assets/" + "C:\\projects\\imo\\src\\assets\\icons\\arrow-d_sprite.svg",
+      toString: function () {
+        return this.url;
+      }
+    }
