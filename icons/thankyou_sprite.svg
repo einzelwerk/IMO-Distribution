@@ -1,0 +1,8 @@
+export default {
+      id: "thankyou_sprite-usage",
+      viewBox: "0 0 100 100",
+      url: "/assets/" + "C:\\projects\\imo\\src\\assets\\icons\\thankyou_sprite.svg",
+      toString: function () {
+        return this.url;
+      }
+    }
