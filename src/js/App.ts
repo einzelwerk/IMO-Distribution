@@ -12,3 +12,6 @@ declare global {
 window.Alpine = Alpine;
 
 Alpine.start();
+
+
+document.documentElement.style.setProperty('--header-height' , `${document.querySelector('header').offsetHeight}px`)

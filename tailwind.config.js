@@ -15,12 +15,18 @@ module.exports = {
       red: '#A60A1D',
       'red-hover': '#AA1628',
       black: '#100D20',
+      'black-100': '#1D1D1B',
       white: '#FFFFFF',
-      'white-50': '#888990',
+      'white-50': '#58585C',
+      'white-40': "rgba(255,255,255,0.4)",
       blue: '#200AA6',
+
       gray: {
-        50: "#ffffff1f;",
-        100: "#0000001f"
+        50: "#ffffff1f",
+        100: "#0000001f",
+        200: "#E0E1E4",
+        300: "#AFAFAA",
+        400: "#8F8F95",
       }
     },
     fontFamily: {

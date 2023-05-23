@@ -1,48 +1,41 @@
-<section class="">
-  <div class="aspect-h-9 aspect-w-16 relative">
-    <div class="container absolute top-14 z-10 flex max-lg:flex-col items-start gap-32 text-white">
-      <h2 class="text-xl relative">
-        <span>IMO </span>
-        <span >Distribution</span>
-        <span class="relative">
-          <span> Werte </span>
-          <a href="#" class="text-base absolute right-0 top-1/2 flex h-24 w-24 -translate-y-1/2 translate-x-full items-center justify-center rounded-full bg-red md:h-36 md:w-36"
-            >Get in <br />
-            touch</a
-          >
-        </span>
-      </h2>
-      <div class="flex flex-col md:flex-row md:gap-5 text-sm">
-        <p class="flex-1">Unsere Werte und Verpflichtungen sind die Grundbausteine unserer Partnerschaften.</p>
-        <p class="flex-1">Wir tun mehr als nur mit Produkten handeln; wir investieren auch in Beziehungen. In der heutigen Welt der weitreichenden Automatisierung glauben wir, dass Authentizität und persönlicher Kontakt wichtiger denn je sind.</p>
+<section class="section relative text-white">
+  <picture class="absolute inset-0 -z-10 block h-full w-full">
+    <img src="{% static './images/planet.jpg' %}" class="h-full w-full object-cover" alt="" />
+  </picture>
+  <div class="container flex flex-col justify-between">
+    <div class="section-heading md:mb-56">
+      <h2 class="section-heading__title">IMO Distribution Schlüsselwerte</h2>
+    </div>
+    <div class="grid grid-cols-1 gap-4 text-black md:grid-cols-3">
+      <div class="flex flex-col gap-6 bg-white p-4 md:p-6">
+        <span class="text-sm text-white-50"> 01 </span>
+        <p class="text-sm font-medium">Unsere Werte und Verpflichtungen sind die Grundbausteine unserer Partnerschaften.</p>
+      </div>
+      <div class="flex flex-col gap-6 bg-white p-4 md:p-6">
+        <span class="text-sm text-white-50"> 02 </span>
+        <p class="text-sm font-medium">Wir tun mehr als nur mit Produkten handeln; wir investieren auch in Beziehungen.</p>
+      </div>
+      <div class="flex flex-col gap-6 bg-white p-4 md:p-6">
+        <span class="text-sm text-white-50"> 03 </span>
+        <p class="text-sm font-medium">In der heutigen Welt der weitreichenden Automatisierung glauben wir, dass Authentizität und persönlicher Kontakt wichtiger denn je sind.</p>
       </div>
     </div>
-    <picture class="absolute inset-0 block">
-      <img src="{% static './images/planet.jpg' %}" class="block h-full w-full object-cover" alt="" />
-    </picture>
   </div>
 </section>
-<section class="">
-  <div class="aspect-h-11 aspect-w-16 relative">
-    <div class="container absolute top-14 z-10 max-lg:flex-col flex items-start gap-32 text-white">
-      <h2 class="text-xl relative flex-1">
-        <span>Unsere </span>
-   
-        <span class="relative">
-          <span> stärke</span>
-          <a href="#" class="text-base absolute right-0 top-1/2 flex h-24 w-24 -translate-y-1/2 translate-x-full items-center justify-center rounded-full bg-red md:h-36 md:w-36"
-            >Get in <br />
-            touch</a
-          >
-        </span>
-      </h2>
-      <div class="flex flex-col flex-1">
-        <p class="flex-1 py-8 border-b border-white">Unsere Werte und Verpflichtungen sind die Grundbausteine unserer Partnerschaften.</p>
-        <p class="flex-1 py-8">Wir tun mehr als nur mit Produkten handeln; wir investieren auch in Beziehungen. In der heutigen Welt der weitreichenden Automatisierung glauben wir, dass Authentizität und persönlicher Kontakt wichtiger denn je sind.</p>
-      </div>
+<section class="section relative text-white bg-blur">
+  <picture class="absolute inset-0 -z-10 block h-full w-full">
+    <img src="{% static './images/image2.jpg' %}" class="h-full w-full object-cover" alt="" />
+  </picture>
+  <div class="container flex flex-col justify-between relative z-10">
+    <div class="section-heading md:mb-56">
+      <h2 class="section-heading__title">Unsere stärke</h2>
     </div>
-    <picture class="absolute inset-0 block">
-      <img src="{% static './images/image2.jpg' %}" class="block h-full w-full object-cover" alt="" />
-    </picture>
+    <div class="flex flex-col items-start gap-10 max-w-xl">
+      <div class="flex flex-col gap-6">
+        <p class="text-base font-medium leading-8">Unser Ziel ist es, eine führende Position auf dem nationalen und internationalen Markt zu erreichen, neue geografische Gebiete mit den besten Lösungen für jeden Kunden zu erschließen</p>
+        <p class="text-sm">Die IMO Distribution GmbH ist ein dynamischer internationaler Distributor und Großhändler mit Sitz in Hannover. Unser Fokus liegt auf A-Marken der Bereiche Gesundheit, Umwelt & Lifestyle.</p>
+      </div>
+      <button class="btn font-medium py-4 px-8" x-on:click="modalOpen = true">Get in touch</button>
+    </div>
   </div>
 </section>

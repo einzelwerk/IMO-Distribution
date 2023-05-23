@@ -2,7 +2,7 @@
   <picture class="w-full-h-full absolute inset-0 block">
     <img src="{% static './images/cta.jpg' %}" class="h-full w-full object-cover" alt="" />
   </picture>
-  <div class="container absolute inset-x-0 bottom-16 flex flex-col items-start">
+  <div class="container absolute inset-x-0 bottom-8 md:bottom-16 flex flex-col items-start">
     <div class="flex max-w-2xl flex-col-reverse bg-white  md:flex-row">
       <div class="flex flex-col p-8">
         <h4 class="text-md mb-8">Als starker Partner sind wir an Ihrer Seite.</h4>
@@ -11,8 +11,8 @@
           <button class="btn btn--red py-4 text-sm">Kontaktieren</button>
         </form>
       </div>
-      <picture class="block w-56 flex-none">
-        <img src="{% static './images/cta-form.jpg' %}" class="w-full h-full" alt="">
+      <picture class="block w-full md:w-56 flex-none h-36">
+        <img src="{% static './images/cta-form.jpg' %}" class="w-full h-full object-cover" alt="">
       </picture>
     </div>
   </div>

@@ -1,22 +1,22 @@
 {% import 'vars.njk' as vars %}
 
-<header class="absolute inset-x-0 z-10 max-lg:py-5">
+<header class="absolute inset-x-0 z-20 py-5">
   <div class="container flex items-center justify-between">
     <a href="" class="block">
       <picture class="block h-11 w-28 md:h-11 md:w-36"> <img src="{% static './images/logo.svg' %}" class="block h-full w-full" alt="" /> </picture>
     </a>
-    <nav class="text-white max-lg:hidden">
-      <ul class="flex gap-10 border-b border-gray-50">
+    <nav class="ml-16 mr-auto text-white max-lg:hidden">
+      <ul class="flex gap-10">
         {% for item in vars.menu %}
-        <li class="{% if loop.index == 1 %}active{% endif %} flex py-8 [&.active]:border-b [&.active]:border-white">
-          <a href="{{ item.url }}" class="block"> {{ item.title }} </a>
+        <li class="flex">
+          <a href="{{ item.url }}" class="link-hover block"> {{ item.title }} </a>
         </li>
         {% endfor %}
       </ul>
     </nav>
     <div class="flex gap-2">
       <div class="relative flex flex-col text-white" x-data="{ dropdown : false}" x-on:click.outside="dropdown = false">
-        <button class="flex items-center gap-1 border border-gray-50 px-4 py-2" x-on:click="dropdown = ! dropdown">
+        <button class="flex items-center gap-1 rounded-lg border border-gray-50 px-4 py-2" x-on:click="dropdown = ! dropdown">
           <span>En</span>
           <svg width="6" height="10">
             <use xlink:href="./assets/sprite.svg#arrow-d_sprite"></use>
@@ -33,7 +33,7 @@
           </ul>
         </div>
       </div>
-      <a href="" class="btn btn--red"> Kontaktieren </a>
+      <button x-on:click="modalOpen = true" class="btn btn--red max-md:hidden">Kontaktieren</button>
       <button class="lg:hidden" x-on:click="menuOpen = true">
         <svg width="40" height="10">
           <use xlink:href="./assets/sprite.svg#menu_sprite"></use>
@@ -43,13 +43,13 @@
   </div>
 </header>
 
-<div class="fixed left-0 top-0 z-50 h-full w-full bg-black" x-show="menuOpen" x-transition>
+<div class="fixed left-0 top-0 z-50 h-full w-full bg-black overflow-auto" x-show="menuOpen" x-transition>
   <div class="container flex items-center justify-between border-b border-[#383945] py-5">
     <a href="" class="block">
       <picture class="block h-11 w-28 md:h-11 md:w-36"> <img src="{% static './images/logo.svg' %}" class="block h-full w-full" alt="" /> </picture>
     </a>
     <button x-on:click="menuOpen = false">
-      <svg width="18" height="18">
+      <svg width="18" height="18" class="text-white">
         <use xlink:href="./assets/sprite.svg#close_sprite"></use>
       </svg>
     </button>
@@ -75,7 +75,7 @@
   <div class="container mt-11">
     <button class="btn btn--red text-sm w-full py-4 font-medium">Kontaktieren</button>
   </div>
-  <div class="container mt-14 flex justify-between items-center">
+  <div class="container mt-14 flex items-center justify-between">
     <div class="flex gap-5">
       <a href="" class="block h-8 w-8">
         <img src="{% static './images/inst.svg' %}" class="h-full w-full" alt="" />
@@ -85,7 +85,7 @@
       </a>
     </div>
     <div class="relative flex flex-col text-white" x-data="{ dropdown : false}" x-on:click.outside="dropdown = false">
-      <button class="flex items-center gap-1 border border-gray-50 px-4 py-2" x-on:click="dropdown = ! dropdown">
+      <button class="flex items-center gap-1 rounded-lg border border-gray-50 px-4 py-2" x-on:click="dropdown = ! dropdown">
         <span>En</span>
         <svg width="6" height="10">
           <use xlink:href="./assets/sprite.svg#arrow-d_sprite"></use>
@@ -103,18 +103,15 @@
       </div>
     </div>
   </div>
-  <div class="container flex justify-between mt-8">
-    <p class="text-white-50 text-xs">
-      All rights reserved 2022 IMO Group
-    </p>
+  <div class="container mt-8 flex justify-between">
+    <p class="text-xs text-white-50">All rights reserved 2022 IMO Group</p>
     <ul class="flex gap-3">
-      <li class="text-white-50 text-xs">
+      <li class="text-xs text-white-50">
         <a href="">Imprint</a>
       </li>
-      <li class="text-white-50 text-xs">
+      <li class="text-xs text-white-50">
         <a href="">Privacy Policy</a>
       </li>
     </ul>
-
   </div>
 </div>
