@@ -2,7 +2,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{njk,js}"],
+  content: ['./src/**/*.{njk,js}'],
 
   theme: {
     screens: {
@@ -18,16 +18,16 @@ module.exports = {
       'black-100': '#1D1D1B',
       white: '#FFFFFF',
       'white-50': '#58585C',
-      'white-40': "rgba(255,255,255,0.4)",
+      'white-40': 'rgba(255,255,255,0.4)',
       blue: '#200AA6',
 
       gray: {
-        50: "#ffffff1f",
-        100: "#0000001f",
-        200: "#E0E1E4",
-        300: "#AFAFAA",
-        400: "#8F8F95",
-      }
+        50: '#ffffff1f',
+        100: '#0000001f',
+        200: '#E0E1E4',
+        300: '#AFAFAA',
+        400: '#8F8F95',
+      },
     },
     fontFamily: {
       sans: ['Libre Franklin', 'sans-serif'],
@@ -37,7 +37,7 @@ module.exports = {
     container: {
       center: true,
       padding: '1rem',
-    }
+    },
   },
   plugins: [
     require('@tailwindcss/typography'),
@@ -63,8 +63,8 @@ module.exports = {
           '@screen xl': {
             maxWidth: '1400px',
           },
-        }
-      })
-    }
+        },
+      });
+    },
   ],
-}
+};
